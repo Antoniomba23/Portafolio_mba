@@ -37,7 +37,6 @@ Portafolio profesional con proyectos destacados en desarrollo web, Java, Python 
 │   └── avatar.jpg
 └── js/
     ├── antonio.js
-    └── chatbot.js
 ```
 
 ## 🚀 Cómo desplegar localmente
