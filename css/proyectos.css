@@ -1,0 +1,436 @@
+/* Estilos específicos para la página de proyectos */
+
+.contenedor-proyectos {
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 0 2rem;
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 15px;
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+    animation: flotarHeaderFooter 4s ease-in-out infinite; /* Agregamos animación */
+}
+
+.titulo-proyectos {
+    color: var(--primary);
+    text-align: center;
+    margin-bottom: 2rem;
+    font-size: 2.5rem;
+    position: relative;
+    padding-bottom: 0.5rem;
+}
+
+.titulo-proyectos::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100px;
+    height: 4px;
+    background-color: var(--secondary);
+    border-radius: 2px;
+}
+
+/* Blog: estructura tipo Masonry */
+.blog {
+    column-count: 3;
+    column-gap: 20px;
+}
+
+/* Estilo de las entradas individuales */
+.entrada {
+    background-color: white;
+    border-radius: 10px;
+    overflow: hidden;
+    display: inline-block;
+    width: 100%;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    animation: fadeIn 1s ease-in-out;
+    break-inside: avoid;
+}
+
+/* Imagen dentro de las entradas */
+.entrada img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    display: block;
+}
+
+/* Contenido dentro de las entradas */
+.entrada .contenido {
+    padding: 1.5rem;
+}
+
+/* Títulos dentro de las entradas */
+.entrada .contenido h2 {
+    color: var(--primary);
+    margin: 0 0 10px 0;
+    font-size: 1.3rem;
+    line-height: 1.3;
+}
+
+/* Párrafos dentro de las entradas */
+.entrada .contenido p {
+    font-size: 0.95rem;
+    line-height: 1.6;
+    color: var(--dark);
+    margin: 0;
+}
+
+/* Efecto hover en las entradas */
+.entrada:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.2);
+}
+
+/* Animación de aparición */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Ajustes para pantallas medianas */
+@media screen and (max-width: 768px) {
+    .blog {
+        column-count: 2;
+    }
+    
+    .titulo-proyectos {
+        font-size: 2rem;
+    }
+}
+
+/* Ajustes para pantallas pequeñas */
+@media screen and (max-width: 480px) {
+    .blog {
+        column-count: 1;
+    }
+    
+    .titulo-proyectos {
+        font-size: 1.8rem;
+    }
+    
+    .entrada .contenido h2 {
+        font-size: 1.2rem;
+    }
+    .entrada {
+        animation: fadeIn 1s ease-in-out;
+    }
+}
+
+/* Fondo de la página */
+body {
+    background-image: url('../img/fondoproyectos.png');
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+}
+
+/* Asegurar que el contenido principal no quede detrás del header */
+.contenedor-proyectos {
+    margin-top: 120px;
+    margin-bottom: 60px;
+}
+
+
+/* Estilo del título principal (Header) */
+h1 {
+
+    animation: flotarHeaderFooter 4s ease-in-out infinite; /* Agregamos animación */
+}
+h3 {
+    animation: flotarHeaderFooter 4s ease-in-out infinite; /* Agregamos animación */
+}
+
+
+/* Animación de flotación general */
+@keyframes flotar {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-12px);
+    }
+}
+
+/* Animación específica para Header y Footer */
+@keyframes flotarHeaderFooter {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-8px);
+    }
+}
+
+/* Animación de aparición */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Efecto de retraso en las animaciones */
+.entrada:nth-child(3n+1) {
+    animation-delay: 0s;
+}
+.entrada:nth-child(3n+2) {
+    animation-delay: 0.2s;
+}
+.entrada:nth-child(3n+3) {
+    animation-delay: 0.4s;
+}
+
+
+/* Párrafos dentro de las entradas */
+.entrada .contenido p {
+    font-size: 0.95rem;
+    line-height: 1.6;
+    color: #666;
+    margin: 0;
+}
+
+/* Efecto hover en las entradas */
+.entrada:hover {
+    transform: translateY(-15px) scale(1.05);
+    box-shadow: 0px 15px 30px rgba(0, 0, 0, 0.2);
+    animation-play-state: paused;
+}
+/* Añadir solo estas reglas al archivo CSS existente */
+
+/* Mejoras para la navegación principal */
+.main-nav {
+    margin-top: 2rem;
+}
+
+.main-nav ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    gap: 1.5rem;
+    padding: 0;
+    margin: 0;
+}
+
+.main-nav .nav-link {
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 1.1rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    transition: all 0.3s ease;
+    padding: 0.5rem 1.2rem;
+    border-radius: 50px;
+    background-color: rgba(255, 255, 255, 0.1);
+    position: relative;
+}
+
+.main-nav .nav-link:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+    transform: translateY(-2px);
+}
+
+.main-nav .nav-link.active {
+    background-color: var(--secondary);
+    color: var(--dark);
+    font-weight: 600;
+}
+
+.main-nav .nav-link.active:hover {
+    background-color: #e69500;
+}
+
+.main-nav .nav-link.active::after {
+    content: "";
+    position: absolute;
+    bottom: -8px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60%;
+    height: 3px;
+    background-color: white;
+    border-radius: 2px;
+}
+
+/* Header sticky */
+#main-header {
+    position:relative;
+    top: 0;
+    z-index: 1000;
+}
+
+/* Estilos para el footer actualizado */
+.footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.redes-sociales {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.icono-red {
+    width: 32px;
+    height: 32px;
+    transition: transform 0.3s ease;
+}
+
+.icono-red:hover {
+    transform: scale(1.2) translateY(-3px);
+}
+
+.cv-download {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: white;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    border-radius: 50px;
+    background-color: var(--secondary);
+    transition: all 0.3s ease;
+}
+
+.cv-download:hover {
+    background-color: #e69500;
+    transform: translateY(-2px);
+}
+
+.cv-download i {
+    font-size: 1.2rem;
+}
+
+/* Responsive para móviles */
+@media (max-width: 480px) {
+    .redes-sociales {
+        gap: 1rem;
+    }
+    
+    .icono-red {
+        width: 28px;
+        height: 28px;
+    }
+    
+    .cv-download {
+        padding: 0.4rem 0.8rem;
+        font-size: 0.9rem;
+    }
+}
+
+/* Estilo para el enlace de la entrada */
+.entrada-link {
+    display: block;
+    text-decoration: none;
+    color: inherit;
+}
+
+/* Mejorar el cursor para indicar que es clickable */
+.entrada {
+    cursor: pointer;
+}
+
+/* Mantener los estilos de hover en la entrada completa */
+.entrada:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.2);
+}
+
+/* Opcional: Efecto al hacer click */
+.entrada:active {
+    transform: translateY(0) scale(0.98);
+}
+
+/* Estilo para el icono de GitHub */
+/* Alternativa con badge flotante */
+.icono-github {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background-color: white;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    color: var(--dark);
+    font-size: 1.2rem;
+}
+
+/* Efecto hover para la versión flotante */
+.entrada:hover .icono-github {
+    background-color: var(--primary);
+    color: white;
+    transform: rotate(10deg) scale(1.1);
+}
+
+/* Opcional: Efecto "latido" para llamar más la atención */
+@keyframes latido {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.2); }
+    100% { transform: scale(1); }
+}
+
+/* Aplicar solo si quieres que el icono tenga animación constante */
+.icono-github {
+    animation: latido 3s infinite;
+}
+
+/* Mejorar el cursor para toda la caja */
+.entrada {
+    cursor: pointer;
+    position: relative;
+}
+
+/* Opcional: Añadir un pequeño texto indicativo */
+.entrada::after {
+    content: "GitHub";
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    background-color: var(--primary);
+    color: white;
+    padding: 3px 8px;
+    border-radius: 12px;
+    font-size: 0.7rem;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.entrada:hover::after {
+    opacity: 1;
+}
+
+/* Estilo para icono de "en desarrollo" */
+.icono-desarrollo {
+    color: var(--secondary);
+    margin-left: 8px;
+    font-size: 1rem;
+}
