@@ -1,6 +1,4 @@
-Aquí tienes un **README.md profesional** para tu repositorio de GitHub, listo para copiar y pegar. Incluye estructura clara, badges y secciones clave:
 
-```markdown
 # 📌 Portafolio Web - Antonio MBA NZANG
 
 ![HTML5](https://img.shields.io/badge/html5-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white)
