@@ -551,9 +551,34 @@ body {
 @media (prefers-color-scheme: dark) {
     body {
         background-color: #0f172a;
-        background-blend-mode: overlay;
+        color: #f8fafc;
+    }
+   body {
+        background-color: #0f172a;
+        color: #f8fafc;
     }
     
+    .sobre-mi, .contenido-principal {
+        background-color: #1e293b;
+        color: #e2e8f0; /* Cambiado a un gris más claro para mejor contraste */
+    }
+    
+    /* Asegurar contraste en textos */
+    .sobre-mi p,
+    .contacto-item p,
+    .habilidad-categoria h4,
+    .experiencia-list li {
+        color: #e2e8f0 !important;
+    }
+    
+    /* Ajustar colores de enlaces en modo oscuro */
+    a {
+        color: #93c5fd;
+    }
+    
+    a:hover {
+        color: #bfdbfe;
+    }
     .principal,
     .aside-sobre-mi {
         background-color: rgba(30, 41, 59, 0.95);
@@ -595,7 +620,7 @@ body {
     display: inline-block;
     width: 30px;
     height: 30px;
-    background-image: url('../img/yobot.png'); /* Misma imagen pero más pequeña */
+    background-image: url('../img/yobot.png'); /* imagen bot */
     background-size: cover;
     background-position: center;
     margin-right: 10px;
