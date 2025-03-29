@@ -152,6 +152,7 @@ h3 {
 }
 
 
+
 /* Animación de flotación general */
 @keyframes flotar {
     0%, 100% {
@@ -210,7 +211,7 @@ h3 {
     box-shadow: 0px 15px 30px rgba(0, 0, 0, 0.2);
     animation-play-state: paused;
 }
-/* Añadir solo estas reglas al archivo CSS existente */
+
 
 /* Mejoras para la navegación principal */
 .main-nav {
@@ -433,4 +434,48 @@ h3 {
     color: var(--secondary);
     margin-left: 8px;
     font-size: 1rem;
+}
+
+/* Añadir soporte para modo oscuro */
+@media (prefers-color-scheme: dark) {
+    body {
+        background-color: #0f172a;
+        background-blend-mode: overlay;
+    }
+    
+    .contenedor-proyectos {
+        background-color: rgba(30, 41, 59, 0.95);
+        color: #e2e8f0;
+    }
+    
+    .entrada {
+        background-color: #1e293b;
+        border: 1px solid #334155;
+    }
+    
+    .entrada .contenido h2 {
+        color: #93c5fd;
+    }
+    
+    .entrada .contenido p {
+        color: #cbd5e1;
+    }
+    
+    .titulo-proyectos {
+        color: #93c5fd;
+    }
+    
+    /* Ajustar el fondo de la imagen en modo oscuro */
+    body {
+        background-image: url('../img/fondoproyectos.png');
+        background-size: cover;
+        background-attachment: fixed;
+        background-position: center;
+        background-color: #0f172a;
+    }
+    
+    /* Asegurar contraste en los bordes */
+    .contenedor-proyectos {
+        border: 1px solid #334155;
+    }
 }
