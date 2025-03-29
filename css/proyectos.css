@@ -435,3 +435,53 @@ h3 {
     margin-left: 8px;
     font-size: 1rem;
 }
+
+/* Modo oscuro para la página de proyectos */
+@media (prefers-color-scheme: dark) {
+    body {
+        background-color: #1e293b; /* Fondo general más oscuro */
+        color: #f8fafc; /* Texto general más claro */
+    }
+
+    .contenedor-proyectos {
+        background-color: rgba(30, 41, 59, 0.9); /* Contenedor principal más oscuro */
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3); /* Sombra ajustada */
+    }
+
+    .titulo-proyectos {
+        color: #f8fafc; /* Título principal más claro */
+    }
+
+    .entrada {
+        background-color: #334155; /* Entradas más oscuras */
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3); /* Sombra ajustada */
+    }
+
+    .entrada .contenido h2 {
+        color: #f8fafc; /* Títulos de las entradas más claros */
+    }
+
+    .entrada .contenido p {
+        color: #e2e8f0; /* Párrafos de las entradas más claros */
+    }
+
+    .entrada:hover {
+        box-shadow: 0 8px 12px rgba(0, 0, 0, 0.4); /* Sombra ajustada en hover */
+    }
+
+    .icono-github {
+        background-color: #475569; /* Icono de GitHub más oscuro */
+        color: #f8fafc; /* Color del icono de GitHub más claro */
+        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3); /* Sombra ajustada */
+    }
+
+    .entrada:hover .icono-github {
+        background-color: var(--secondary); /* Color de hover del icono de GitHub */
+        color: #1e293b; /* Texto del icono de GitHub en hover */
+    }
+
+    .entrada::after {
+        background-color: var(--secondary); /* Color del badge de GitHub */
+        color: #1e293b; /* Texto del badge de GitHub */
+    }
+}

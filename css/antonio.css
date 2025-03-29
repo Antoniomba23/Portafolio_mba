@@ -595,14 +595,14 @@ body {
     bottom: 80px;
     right: 20px;
     width: 300px;
-    background: white;
-    border-radius: 10px;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    background: #f0f0f0; /* Cambia el color de fondo */
+    border-radius: 15px; /* Aumenta el radio del borde */
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1); /* Ajusta la sombra */
     z-index: 1000;
     display: none;
     flex-direction: column;
     overflow: hidden;
-    border: 2px solid var(--primary);
+    border: 1px solid var(--primary); /* Cambia el estilo del borde */
 }
 
 #chatbot-header {
@@ -636,11 +636,12 @@ body {
     cursor: pointer;
 }
 
-#chatbot-messages {
-    height: 200px;
-    padding: 10px;
-    overflow-y: auto;
-    background: #f9f9f9;
+.bot-message {
+    background: #5755e7; /* Color más suave */
+    align-self: flex-start;
+    border-radius: 20px; /* Aumenta el radio del borde */
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1); /* Sombra */
+    color: #333; /* Color del texto */
 }
 
 #chatbot-input {
@@ -726,4 +727,47 @@ body {
 
 .chatbot-message {
     animation: messageFadeIn 0.3s ease-out;
+}
+
+/* Modo oscuro para el chatbot */
+@media (prefers-color-scheme: dark) {
+    #chatbot-container {
+        background: #294a80; /* Fondo más oscuro */
+        border: 1px solid #475569; /* Borde más oscuro */
+        box-shadow: 0 5px 20px rgba(0, 0, 0, 0.5); /* Sombra más pronunciada */
+    }
+
+    #chatbot-header {
+        background: #334155; /* Encabezado más oscuro */
+        color: #f8fafc; /* Texto más claro */
+    }
+
+    #close-chatbot {
+        color: #f8fafc; /* Color del icono de cerrar */
+    }
+
+    .bot-message {
+        background: #475569; /* Mensaje del bot más oscuro */
+        color: #f8fafc; /* Texto del bot más claro */
+    }
+
+    .user-message {
+        background: #64748b; /* Mensaje del usuario más oscuro */
+        color: #f8fafc; /* Texto del usuario más claro */
+    }
+
+    #chatbot-input {
+        border-top: 1px solid #475569; /* Borde superior de la entrada */
+    }
+
+    #user-input {
+        background: #334155; /* Fondo de la entrada más oscuro */
+        color: #f8fafc; /* Texto de la entrada más claro */
+        border: 1px solid #64748b; /* Borde de la entrada más oscuro */
+    }
+
+    #send-message {
+        background: #64748b; /* Botón de enviar más oscuro */
+        color: #f8fafc; /* Texto del botón más claro */
+    }
 }
