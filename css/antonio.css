@@ -771,3 +771,26 @@ body {
         color: #f8fafc; /* Texto del botón más claro */
     }
 }
+.herramientas-list {
+    list-style: none; /* Elimina los puntos de la lista */
+    padding: 0; /* Elimina el padding por defecto de la lista */
+}
+
+.herramientas-list li {
+    display: flex; /* Utiliza flexbox para alinear el icono y el texto */
+    align-items: center; /* Alinea verticalmente el icono y el texto */
+    margin-bottom: 5px; /* Agrega un margen inferior entre los elementos */
+}
+
+.herramientas-list li i {
+    margin-right: 5px; /* Agrega un margen derecho al icono para separarlo del texto */
+    color: var(--primary); /* Cambia el color del icono (opcional) */
+    font-size: 1.2em; /* Aumenta el tamaño del icono (opcional) */
+}
+
+/* Estilos para iconos */
+i {
+    color: var(--secondary); /* Cambia el color del icono */
+    margin-right: 5px; /* Agrega un margen derecho al icono */
+    font-size: 1.2em; /* Aumenta el tamaño del icono */
+}
